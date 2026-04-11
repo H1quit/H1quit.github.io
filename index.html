@@ -1,10 +1,78 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-    <title>My First Page</title>
+    <meta charset="UTF-8">
+    <title>我的个人主页</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            padding: 80px 20px;
+        }
+
+        img {
+            width: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        h1 {
+            margin: 20px 0 10px;
+            font-size: 36px;
+        }
+
+        p {
+            color: #ddd;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 12px;
+            max-width: 500px;
+        }
+
+        a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello World 🎉</h1>
-    <p>这是我的第一个GitHub网站！</p>
+
+<div class="container">
+    <img src="https://via.placeholder.com/120" alt="头像">
+
+    <h1>你好，我是 H1quit 👋</h1>
+    <p>一名正在学习编程和AI的开发者</p>
+
+    <div class="card">
+        <h2>📌 关于我</h2>
+        <p>热爱技术，正在学习前端 / Python / AI</p>
+    </div>
+
+    <div class="card">
+        <h2>🚀 项目</h2>
+        <p><a href="#">我的第一个项目</a></p>
+    </div>
+
+    <div class="card">
+        <h2>📫 联系我</h2>
+        <p>Email: your@email.com</p>
+    </div>
+</div>
+
 </body>
 </html>
