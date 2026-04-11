@@ -2,98 +2,157 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<title>H1quit | 个人主页</title>
+<title>H1quit | Portfolio</title>
+
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 
 <style>
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
     color: white;
+    scroll-behavior: smooth;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+}
+
+/* 内容 */
+.container {
+    padding: 80px 20px;
     text-align: center;
 }
 
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-.container {
-    padding: 80px 20px;
-}
-
+/* 标题 */
 h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+    font-size: 48px;
     animation: fadeInDown 1s ease;
 }
 
+/* 打字效果 */
 .typing {
     border-right: 2px solid white;
+    display: inline-block;
     white-space: nowrap;
     overflow: hidden;
-    width: 0;
-    margin: 0 auto;
-    animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+    animation: typing 3s steps(30), blink .7s infinite;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 220px }
-}
-
-@keyframes blink {
-    50% { border-color: transparent }
-}
-
+/* 卡片 */
 .card {
     background: rgba(255,255,255,0.1);
     margin: 20px auto;
     padding: 20px;
-    max-width: 500px;
+    max-width: 600px;
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-    animation: fadeInUp 1s ease;
+    transition: 0.3s;
 }
 
 .card:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* 项目网格 */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.project {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+/* 动画 */
+@keyframes fadeInDown {
+    from {opacity:0; transform:translateY(-20px);}
+    to {opacity:1; transform:translateY(0);}
+}
+
+@keyframes typing {
+    from {width:0}
+    to {width:260px}
+}
+
+@keyframes blink {
+    50% {border-color: transparent;}
 }
 
 a {
     color: #ffd700;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-@keyframes fadeInDown {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 </style>
 </head>
 
 <body>
 
+<div id="particles-js"></div>
+
 <div class="container">
 
-    <h1>Hi, I'm quit 👋</h1>
+<h1>Hi, I'm H1quit 👋</h1>
+<p class="typing">Building something cool...</p>
 
- 
+<div class="card">
+<h2>🚀 关于我</h2>
+<p>专注 Web / AI / 编程成长中</p>
 </div>
+
+<div class="card">
+<h2>💻 项目展示</h2>
+
+<div class="projects">
+
+<div class="project">
+<h3>项目1</h3>
+<p>描述你的项目</p>
+</div>
+
+<div class="project">
+<h3>项目2</h3>
+<p>描述你的项目</p>
+</div>
+
+<div class="project">
+<h3>项目3</h3>
+<p>描述你的项目</p>
+</div>
+
+</div>
+</div>
+
+<div class="card">
+<h2>📫 联系我</h2>
+<p>Email: your@email.com</p>
+</div>
+
+</div>
+
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 80 },
+    size: { value: 3 },
+    move: { speed: 2 },
+    line_linked: { enable: true },
+  }
+});
+</script>
 
 </body>
 </html>
