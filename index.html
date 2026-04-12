@@ -2,153 +2,80 @@
 <html lang="zh">
 <head>
 <meta charset="UTF-8">
-<title>H1quit | Portfolio</title>
+<title>H1quit | Home</title>
 
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
 body {
     margin: 0;
-    font-family: "Segoe UI", sans-serif;
-    color: white;
-    scroll-behavior: smooth;
-}
-
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+    font-family: Arial;
     background: linear-gradient(120deg, #1e3c72, #2a5298);
-}
-
-/* 内容 */
-.container {
-    padding: 80px 20px;
+    color: white;
     text-align: center;
 }
 
-/* 标题 */
+.container {
+    padding: 100px 20px;
+}
+
 h1 {
     font-size: 48px;
-    animation: fadeInDown 1s ease;
 }
 
-/* 打字效果 */
-.typing {
-    border-right: 2px solid white;
+.nav {
+    margin-top: 40px;
+}
+
+.btn {
     display: inline-block;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: typing 3s steps(30), blink .7s infinite;
-}
-
-/* 卡片 */
-.card {
+    margin: 10px;
+    padding: 12px 25px;
     background: rgba(255,255,255,0.1);
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 600px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
-
-/* 项目网格 */
-.projects {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.project {
-    background: rgba(255,255,255,0.1);
-    padding: 20px;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.project:hover {
-    transform: scale(1.05);
-}
-
-/* 动画 */
-@keyframes fadeInDown {
-    from {opacity:0; transform:translateY(-20px);}
-    to {opacity:1; transform:translateY(0);}
-}
-
-@keyframes typing {
-    from {width:0}
-    to {width:260px}
-}
-
-@keyframes blink {
-    50% {border-color: transparent;}
-}
-
-a {
-    color: #ffd700;
+.btn:hover {
+    background: rgba(255,255,255,0.3);
+    transform: scale(1.1);
 }
 </style>
 </head>
 
 <body>
 
-<div id="particles-js"></div>
-
 <div class="container">
 
-<h1>Hi, I'm H1quit 👋</h1>
+<h1>H1quit | IT Operations 👨‍💻</h1>
+
 <p>
 目前专注于 IT 运维方向学习，系统掌握 Linux 基础操作、网络原理及服务器部署流程，能够独立完成基础环境配置与 Web 服务搭建，并具备初步的故障排查能力，持续通过实践提升工程经验，目标成为一名具备实际运维能力的工程师。
 </p>
 
-<div class="card">
-<h2>💻 运维实践</h2>
+<div class="nav">
 
-<div class="projects">
+<a href="about.html" class="btn">
+<i class="fas fa-user"></i> 关于我
+</a>
 
-<div class="project">
-<h3>🌐 个人网站部署</h3>
-<p>
-基于 GitHub Pages 搭建静态网站，完成页面设计与发布流程，掌握基础的站点部署与版本管理能力。
-</p>
-</div>
+<a href="skills.html" class="btn">
+<i class="fas fa-tools"></i> 技能
+</a>
 
-<div class="project">
-<h3>🐳 Docker 部署实践</h3>
-<p>
-使用 Docker 部署 Web 服务，完成镜像拉取、容器运行与端口映射，理解容器化基础与应用部署流程。
-</p>
-</div>
+<a href="projects.html" class="btn">
+<i class="fas fa-server"></i> 运维实践
+</a>
 
-<div class="project">
-<h3>🖥️ Linux 服务器基础配置</h3>
-<p>
-完成 Linux 系统基础配置，包括用户管理、权限控制、常用服务安装及简单安全配置，具备基本运维操作能力。
-</p>
+<a href="contact.html" class="btn">
+<i class="fas fa-envelope"></i> 联系我
+</a>
+
 </div>
 
 </div>
-</div>
-
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 80 },
-    size: { value: 3 },
-    move: { speed: 2 },
-    line_linked: { enable: true },
-  }
-});
-</script>
 
 </body>
 </html>
