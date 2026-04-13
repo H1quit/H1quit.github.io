@@ -10,7 +10,7 @@
 body {
     margin: 0;
     font-family: "Segoe UI", sans-serif;
-    background: linear-gradient(120deg, #2a5298, #1e3c72);
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
     color: white;
 }
 
@@ -18,34 +18,47 @@ body {
     max-width: 900px;
     margin: auto;
     padding: 80px 20px;
+    text-align: center;
 }
 
 h1 {
-    text-align: center;
     margin-bottom: 40px;
 }
 
-/* 项目卡片 */
+/* 项目卡片（同步技能风格） */
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .project {
     background: rgba(255,255,255,0.1);
+    margin: 10px;
     padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    width: 260px;
     transition: 0.3s;
 }
 
 .project:hover {
-    transform: translateY(-8px);
-    background: rgba(255,255,255,0.2);
+    transform: scale(1.08);
+    background: rgba(255,255,255,0.3);
 }
 
-/* 返回按钮 */
+/* 返回按钮（同步技能页） */
 .back {
-    display: block;
-    text-align: center;
-    margin-top: 40px;
+    margin-top: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
     text-decoration: none;
     color: white;
+}
+
+.back:hover {
+    background: rgba(255,255,255,0.3);
 }
 </style>
 </head>
@@ -56,19 +69,23 @@ h1 {
 
 <h1>💻 运维实践</h1>
 
+<div class="projects">
+
 <div class="project">
-<h3><i class="fas fa-globe"></i> 个人网站部署</h3>
-<p>基于 GitHub Pages 搭建静态网站，实现页面设计与版本管理。</p>
+<h3><i class="fas fa-globe"></i> 网站部署</h3>
+<p>基于 GitHub Pages 完成静态网站搭建与发布。</p>
 </div>
 
 <div class="project">
-<h3><i class="fab fa-docker"></i> Docker 部署实践</h3>
-<p>使用 Docker 部署 Web 服务，完成容器运行与端口映射。</p>
+<h3><i class="fab fa-docker"></i> Docker 实践</h3>
+<p>使用 Docker 部署 Web 服务并进行端口映射。</p>
 </div>
 
 <div class="project">
-<h3><i class="fas fa-terminal"></i> Linux 服务器配置</h3>
+<h3><i class="fas fa-terminal"></i> Linux 配置</h3>
 <p>完成用户管理、权限控制及基础服务部署。</p>
+</div>
+
 </div>
 
 <a href="index.html" class="back">⬅ 返回首页</a>
