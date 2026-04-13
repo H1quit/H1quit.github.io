@@ -4,40 +4,81 @@
 <meta charset="UTF-8">
 <title>技能 | H1quit</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <style>
 body {
-    font-family: Arial;
-    background: #1e3c72;
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
     color: white;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 80px 20px;
     text-align: center;
-    padding: 50px;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+/* 技能卡片 */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .skill {
-    display: inline-block;
+    background: rgba(255,255,255,0.1);
     margin: 10px;
-    padding: 10px 20px;
-    background: rgba(255,255,255,0.2);
+    padding: 15px 25px;
     border-radius: 20px;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    background: rgba(255,255,255,0.3);
+}
+
+/* 返回按钮 */
+.back {
+    margin-top: 50px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+}
+
+.back:hover {
+    background: rgba(255,255,255,0.3);
 }
 </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <h1>🧰 技能</h1>
 
-<div>
-<span class="skill">Linux</span>
-<span class="skill">Docker</span>
-<span class="skill">Nginx</span>
-<span class="skill">TCP/IP</span>
-<span class="skill">Git</span>
+<div class="skills">
+<div class="skill"><i class="fab fa-linux"></i> Linux</div>
+<div class="skill"><i class="fas fa-server"></i> Nginx</div>
+<div class="skill"><i class="fab fa-docker"></i> Docker</div>
+<div class="skill"><i class="fas fa-network-wired"></i> TCP/IP</div>
+<div class="skill"><i class="fab fa-git-alt"></i> Git</div>
 </div>
 
-<br><br>
+<a href="index.html" class="back">⬅ 返回首页</a>
 
-<a href="index.html">⬅ 返回首页</a>
+</div>
 
 </body>
 </html>
